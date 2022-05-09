@@ -123,7 +123,6 @@ export class EnvComponent implements OnInit, OnDestroy {
         if (result.status === StorageHandleStatus.success) {
           this.message.success('新增成功');
           this.envInfo = result.data;
-          this.handleSwitchEnv(result.data.uuid);
           this.getAllEnv(Number(result.data.uuid));
         } else {
           this.message.success('新增失败');
